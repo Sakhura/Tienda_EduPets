@@ -1,0 +1,138 @@
+Tienda de Mascotas 
+En nuestra tienda de mascotas, ofrecemos una amplia variedad de productos y
+servicios para el cuidado y bienestar de tus mascotas. Nos enorgullece ser tu destino
+de confianza para alimentos, accesorios y servicios veterinarios.
+
+
+Objetivo
+El proyecto tiene como objetivo, entre otras cosas, desarrollar un sistema para mostrar
+información de la tienda de mascotas, así como también la implementación del
+servicio de productos, detalles del producto, registro de usuario, confirmación del
+registro de usuario, login, registro de proveedor y confirmación de registro de
+proveedor.
+
+Requisitos Funcionales del sistema
+1. El sistema debe controlar el acceso de los usuarios a la plataforma.
+2. El sistema debe permitir a los usuarios registrarse y acceder a la plataforma.
+3. El sistema debe permitir a los proveedores registrarse y acceder a la plataforma.
+4. El sistema debe mostrar la información de la tienda de mascotas.
+5. El sistema debe permitir la consulta del listado de productos y sus detalles.
+
+Definiciones y lineamientos arquitectonicos
+
+-SPA (Single Page Application)
+-Framework : Vue - Vue-router
+-Consumo de Api 
+-navegadores de escritorio, navegadores moviles
+-bootstrap 
+-logica para mostrar pag error 404
+
+Flujo de Navegacion (foto por wsp)
+
+Paginas 
+
+1.- Login de Usuario
+La pantalla de Login de usuario se ilustra a continuación. En esta pantalla, se deberán
+hacer las siguientes validaciones:
+- Validar el ingreso de un email válido
+- Validar el ingreso de ambos campos al momento de hacer click en Login
+- Botón registrarse debe permitir ir a pantalla de registro (Registro usuario)
+
+
+2.- Registro de Usuario
+La pantalla de Registro de usuario se ilustra a continuación. En esta pantalla, se
+deberán hacer las siguientes validaciones:
+- Todos los datos son obligatorios
+- Debe validar el formato del email
+- Debe validar que el campo “Contraseña” y “Repetir Contraseña” sean iguales
+- Debe validar el formato del teléfono
+- Debe entregar mensajes con los errores y no permitir el envío de información
+en caso de haberlos.
+- El botón de “Regresar al login” debe permitir redireccionamiento a la pantalla
+login.
+- Botón Registrarme: al presionar este botón se debe invocar el servicio REST de
+Registro y redireccionar a la próxima pantalla de Confirmación de registro.
+
+3.- Pantalla Confirmación Registro Usuario
+La pantalla Confirmación Registro usuario se despliega a continuación. Esta pantalla
+contiene los siguientes elementos:
+- Mensaje de Confirmación: debe desplegar el mensaje de confirmación asignado
+por el servicio REST.
+- El botón de “Regresar al login” debe permitir redireccionamiento a la pantalla
+login.
+
+4.- Pantalla Home
+La pantalla de Home se ilustra a continuación. Esta pantalla debe tener los siguientes
+elementos:
+Proveedores: Información de Proveedores, el botón “Registrar Proveedor” debe
+permitir redireccionamiento a la pantalla Registro Proveedor
+Laboratorios: Información de los laboratorios.
+Listado Productos: Botón para consultar productos.
+Contacto y Redes Sociales: Datos de contacto y listado redes sociales
+
+5.- Registro Proveedor
+La pantalla de Registro de proveedor se ilustra a continuación. En esta pantalla, se
+deberán hacer las siguientes validaciones:
+- Todos los datos son obligatorios
+- Debe validar el formato del email
+- Debe validar el formato del teléfono
+- Debe entregar mensajes con los errores y no permitir el envío de información
+en caso de haberlos.
+- El botón de “Regresar al home” debe permitir redireccionamiento a la pantalla
+home.
+- Botón Registrar Proveedor: al presionar este botón se debe invocar el servicio
+REST de Registro y redireccionar a la próxima pantalla de Confirmación de
+registro.
+
+6.-Pantalla Confirmación Registro Proveedor
+La pantalla Confirmación Registro proveedor se despliega a continuación. Esta pantalla
+contiene los siguientes elementos:
+- Mensaje de Confirmación: debe desplegar el mensaje de confirmación asignado
+por el servicio REST.
+- El botón de “Regresar al home” debe permitir redireccionamiento a la pantalla
+home.
+
+7.- Página de Listado de Productos:
+La pantalla de Listado de productos se ilustra a continuación. Esta pantalla debe tener
+los siguientes elementos:
+- Listado de producto
+- Cada producto muestra la información de categoría y nombre. Cada producto es
+clickeable y debe llevar al detalle del mismo (pantalla detalle producto).
+- Botón de “Regresar al home” debe permitir redireccionamiento a la pantalla
+home.
+
+
+8.- Página Detalle de Producto:
+La pantalla de Detalle de producto se ilustra a continuación. Esta pantalla debe tener
+los siguientes elementos:
+- El detalle del producto seleccionado, donde muestra la información de
+categoría, nombre, descripción, precio y stock.
+- Botón de “Regresar Listado Producto” debe permitir redireccionamiento a la
+pantalla Listado Productos.
+
+
+Especificación API
+Para la implementación de las pantallas anteriores, se dispone de una API con datos de
+prueba. Dicha API tiene los mocks a los siguientes servicios:
+- Servicio Autenticación (Login)
+- Servicio Registro Usuario
+- Servicio Confirmacion Registro Usuario
+- Servicio Home
+- Servicio Registro Proveedor
+- Servicio Confirmacion Registro Proveedor
+- Servicio Productos
+
+** entregar el archivo con api  (Sabina)**
+
+
+Requerimientos a implementar
+El jefe de proyectos, quien lleva un control meticuloso de las actividades del proyecto,
+le ha solicitado a Usted que realice las siguientes tareas:
+1. Implementar página de Login
+2. Implementar pagina de registro Usuario
+3. Implementar página de confirmación de registro Usuario
+4. Implementar página de Home
+5. Implementar página de registro Proveedor
+6. Implementar página de confirmación de registro Proveedor
+7. Implementar página de Productos
+8. Implementar página de Detalle de producto
