@@ -1,6 +1,6 @@
 <template>
-  <img alt="Tienda logo" src="./assets/logotienda.png" />
-  <HomePage msg="Bienevido a EduPets" />
+  <img alt="Tienda logo" src="./assets/LogoEduPets.jpg" />
+  <HomePage msg="Bienvenido a EduPets" />
 </template>
  
 <script>
