@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Tienda logo" src="./assets/logotienda.png" />
+  <HomePage msg="Bienevido a EduPets" />
 </template>
-
+ 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HomePage from "./views/HomePage.vue";
+ 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HomePage,
+  },
+};
 </script>
-
+ 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
+}
+img {
+  width: 300px;
+  margin-bottom: 20px;
 }
 </style>
