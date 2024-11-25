@@ -1,15 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Importar las vistas
-import Home from "../views/HomePage.vue";
+
 import Login from "../views/LoginUsuario.vue";
+import Home from "../views/HomePage.vue";
 import Registro from "../views/Registro.vue";
 import Proveedores from "../views/Proveedores.vue";
 import Productos from "../views/ProductosVarios.vue";
 
 const routes = [
-  { path: "/", name: "home", component: Home },
-  { path: "/login", name: "login", component: Login },
+  { path: '/',    redirect: '/login'},
+  { path: "/", name: "login", component: Login },
+  { path: "/home", name: "home", component: Home },
   { path: "/registro", name: "registro", component: Registro },
   { path: "/proveedores", name: "proveedores", component: Proveedores, meta: { requiresAuth: true } },
   { path: "/productos", name: "productos", component: Productos, meta: { requiresAuth: true } },
