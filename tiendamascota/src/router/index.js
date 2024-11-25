@@ -1,35 +1,75 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// Importar las vistas
+import Vue from "vue";
+import VueRouter from "vue-router";
+import NotFound from "../views/NotFound.vue";
+import HomePage from "../views/HomePage.vue";
+import ConfirmacionProveedor from "@/views/ConfirmacionProveedor.vue";
+import ConfirmacionUsuario from "@/views/ConfirmacionUsuario.vue";
+import DetalleProducto from "@/components/DetalleProducto.vue";
+import ListadoProducto from "@/views/ListadoProducto.vue";
+import LoginUsuario from "@/views/LoginUsuario.vue";
+import RegistroUsuario from "@/views/RegistroUsuario.vue";
+import RegistroProveedor from "@/views/RegistroProveedor.vue";
+ 
 
-import Login from "../views/LoginUsuario.vue";
-import Home from "../views/HomePage.vue";
-import Registro from "../views/Registro.vue";
-import Proveedores from "../views/Proveedores.vue";
-import Productos from "../views/ProductosVarios.vue";
-
+ 
 const routes = [
-  { path: '/',    redirect: '/login'},
-  { path: "/", name: "login", component: Login },
-  { path: "/home", name: "home", component: Home },
-  { path: "/registro", name: "registro", component: Registro },
-  { path: "/proveedores", name: "proveedores", component: Proveedores, meta: { requiresAuth: true } },
-  { path: "/productos", name: "productos", component: Productos, meta: { requiresAuth: true } },
+  {
+    path: "/",
+    name: "HomePage",
+    component: HomePage,
+  },
+  {
+    path: "/confirmacionproveedor",
+    name: "ConfirmacionProveedor",
+    component: ConfirmacionProveedor,
+  },
+ 
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
+  },
+  {
+    path: "/confirmacionusuario",
+    name: "ConfirmacionUsuario",
+    component: ConfirmacionUsuario,
+  },
+  {
+    path: "detalleproducto",
+    name: "DetalleProducto",
+    component: DetalleProducto,
+  },
+ 
+  {
+    path: "listadoproducto",
+    name: "ListadoProducto",
+    component: ListadoProducto,
+  },
+ 
+  {
+    path: "loginusuario",
+    name: "LoginUsuario",
+    component: LoginUsuario,
+  },
+ 
+  {
+    path: "registrousuario",
+    name: "RegistroUsuario",
+    component: RegistroUsuario,
+  },
+ 
+  {
+    path: "registroproveedor",
+    name: "RegistroProveedor",
+    component: RegistroProveedor,
+  },
 ];
-
+ 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-});
-
-// Redirección si no está autenticado
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem("token"); // Simulación de autenticación
-  if (to.meta.requiresAuth && !isAuthenticated) {
-    next("/login");
-  } else {
-    next();
-  }
+  routes
 });
 
 export default router;
