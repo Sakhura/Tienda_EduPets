@@ -2,7 +2,7 @@
     <div class="imagen">
       <img
         class="imageLogo"
-        :src="require('@/assets/logotienda.png')"
+        :src="require('@/assets/LogoEduPets.jpg')"
         alt="logo"
       />
       <h1 class="title">Tienda de Mascotas</h1>
