@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginUsuario from "@/views/LoginUsuario.vue";
 import HomePage from "@/views/HomePage.vue";
 import RegistroUsuario from "@/views/RegistroUsuario.vue";
+import ConfirmacionUsuario from "@/views/ConfirmacionUsuario.vue";
 
 const routes = [
   {
@@ -22,7 +23,13 @@ const routes = [
   },
   { path: '/RegistroUsuario' ,
     name:'registroUsuario', 
-    component: RegistroUsuario}
+    component: RegistroUsuario
+  },
+    {
+      path: '/confirmacionUsuario',
+      name: 'ConfirmacionUsuario',
+      component: ConfirmacionUsuario
+    },
 ]
 
 const router = createRouter({

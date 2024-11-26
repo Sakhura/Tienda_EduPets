@@ -24,7 +24,7 @@
               <label for="repeatPassword" class="form-label">Repetir Contraseña:</label>
               <input type="password" id="repeatPassword" class="form-control" v-model="user.repeatPassword" />
             </div>
-            <button type="button" class="btn btn-primary w-100" @click="registroUsuario()">Registrarme</button>
+            <button type="button" class="btn btn-primary w-100" @click="confimaUsuario">Registrarme</button>
             <router-link to="/" class="btn btn-primary w-100">Volver al Login</router-link>
           </form>
         </div>
@@ -47,9 +47,9 @@
       };
     },
     methods: {
-      registroUsuario() {
-       
-      },
+      confimaUsuario(){
+        this.$router.push('/confirmacionusuario')
+      }
     },
   };
   </script>
