@@ -49,7 +49,17 @@ const routes = [
     {
       path: '/*',
       component: NotFound,
-    }
+    },
+    {
+      path: '/RegistroProveedor',
+      name: 'RegistroProveedor',
+      component: RegistroProveedor,
+    },
+    {
+      path: '/ConfirmacionProveedor',
+      name: 'ConfirmacionProveedor',
+      component: ConfirmacionProveedor,
+    },
 ]
 
 const router = createRouter({
