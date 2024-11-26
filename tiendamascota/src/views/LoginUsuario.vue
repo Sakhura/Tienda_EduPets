@@ -64,9 +64,66 @@ export default {
 </script>
 
 <style>
-.card {
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Tonos pastel */
+:root {
+  --pastel-blue: #b3d9ff;
+  --pastel-pink: #ffc1cc;
+  --pastel-green: #d4f8e8;
+  --pastel-purple: #e6ccff;
+  --text-dark: #4a4a4a;
+}
+
+/* Estilo de la tarjeta */
+.pastel-card {
+  border: none;
+  border-radius: 15px;
+  background: var(--pastel-blue);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Títulos */
+.card-title {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.btn-pastel {
+  background-color: var(--pastel-purple);
+  color: white;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn-pastel:hover {
+  background-color: var(--pastel-pink);
+  color: var(--text-dark);
+}
+
+/* Input */
+.form-control {
+  border: 2px solid var(--pastel-green);
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+.form-control:focus {
+  border-color: var(--pastel-pink);
+  outline: none;
+  box-shadow: 0px 0px 5px var(--pastel-pink);
+}
+
+/* Separación entre campos */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Centrando el contenido */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 </style>
