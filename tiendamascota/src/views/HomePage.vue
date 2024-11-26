@@ -103,23 +103,35 @@ export default {
 </script>
 
 <style>
-.titulo {
-  background-color: blue;
-}
-
-.image {
-  background-color: red;
-}
-
 .cabecera {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: green;
-  width: 100vw;
+  background-color: #f0f8ff; /* Azul pastel claro */
 }
 
-.proveedores {
-  margin: 15px;
+.titulo h1 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
 }
+
+.proveedores table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.proveedores .btn-primary {
+  background-color: #b3d9ff; /* Azul pastel */
+  border-color: #80bfff;
+}
+
+.laboratorios .card {
+  border: 1px solid #b3d9ff;
+}
+
+.laboratorios .card-header {
+  background-color: #80bfff;
+}
+
+footer {
+  background-color: #e6f7ff; /* Fondo pastel claro */
+}
+
 </style>
