@@ -5,18 +5,12 @@
 </template>
  
 <script>
- 
- 
- 
-export default {
-  name: 'App',
-  components: {
-   
- 
-   
-  }
-}
+  import { defineComponent } from 'vue';
+  export default defineComponent({
+    name: 'App',
+  })
 </script>
+ 
  
 <style>
  
