@@ -6,9 +6,7 @@
         alt="logo"
       />
       <h1 class="title">Tienda de Mascotas</h1>
-      <button type="button" class="btn btn-primary w-100" @click="LoginUsuario()">
-        Regresar al Login
-      </button>
+      <router-link to="/Home" class="btn btn-primary w-100">Volver al Home</router-link>
     </div>
    
     <div class="registro-box">
