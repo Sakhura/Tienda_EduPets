@@ -22,7 +22,7 @@ const routes = [
   },
   { path: '/RegistroUsuario' ,
     name:'registroUsuario', 
-    componente: RegistroUsuario}
+    component: RegistroUsuario}
 ]
 
 const router = createRouter({
