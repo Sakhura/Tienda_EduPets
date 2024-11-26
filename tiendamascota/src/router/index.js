@@ -5,6 +5,11 @@ import LoginUsuario from "@/views/LoginUsuario.vue";
 import HomePage from "@/views/HomePage.vue";
 import RegistroUsuario from "@/views/RegistroUsuario.vue";
 import ConfirmacionUsuario from "@/views/ConfirmacionUsuario.vue";
+import ConfirmacionProveedor from "@/views/ConfirmacionProveedor.vue";
+import DetalleProducto from "@/views/DetalleProducto.vue";
+import NotFound from "@/views/NotFound.vue";
+import ProductosVarios from "@/views/ProductosVarios.vue";
+import RegistroProveedor from "@/views/RegistroProveedor.vue";
 
 const routes = [
   {
@@ -30,6 +35,21 @@ const routes = [
       name: 'ConfirmacionUsuario',
       component: ConfirmacionUsuario
     },
+    {
+      path: '/Productos',
+      name: 'ListaProductos',
+      component: ProductosVarios
+     
+    },
+    {
+      path: '/Productos/:id',
+      name: 'DetalleProducto',
+      component: DetalleProducto,
+    },
+    {
+      path: '/*',
+      component: NotFound,
+    }
 ]
 
 const router = createRouter({
