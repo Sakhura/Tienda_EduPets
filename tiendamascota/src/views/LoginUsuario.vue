@@ -48,7 +48,7 @@ export default {
                   .then((resp) => {
                       if (this.user.email === resp.data.loginRequest.email && this.user.password === resp.data.loginRequest.password) {
                           alert('logueado'),
-                          this.$router.push({ name: 'HomePage' })
+                          this.$router.push({ name: 'Home' })
                       } else {
                           alert('no logueado')
                       }
