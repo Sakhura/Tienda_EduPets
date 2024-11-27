@@ -1,56 +1,70 @@
 <template>
-    <div class="imagen">
-      <img
-        class="imageLogo"
-        :src="require('@/assets/LogoEduPets.jpg')"
-        alt="logo"
-      />
-      <h1 class="title">Tienda de Mascotas</h1>
-      <router-link to="/Home" class="btn btn-primary w-100">Volver al Home</router-link>
-    </div>
-   
-    <div class="registro-box">
-      <h2>Registro Proveedor</h2>
-      <form action="#" method="POST">
-        <label for="name" class="form-label">Nombre Proveedor: </label>
-        <input
-          type="text"
-          id="name"
-          class="form-control"
-          v-model="user.name"
-          placeholder="Nombre"
+    <div class="container-fluid d-flex flex-column align-items-center">
+      <!-- Logo e Información -->
+      <div class="imagen text-center mb-4 animate-fade-in">
+        <img
+          class="imageLogo rounded-circle shadow"
+          :src="require('@/assets/LogoEduPets.jpg')"
+          alt="logo"
         />
-   
-        <label for="name" class="form-label">Nombre Persona Contacto: </label>
-        <input
-          type="text"
-          id="name"
-          class="form-control"
-          v-model="user.namecontacto"
-          placeholder="Nombre"
-        />
-   
-        <label for="email" class="form-label">Email:</label>
-        <input
-          type="email"
-          id="email"
-          class="form-control"
-          v-model="user.email"
-          placeholder="email@email.com"
-        />
-   
-        <label for="phone" class="form-label">Teléfono:</label>
-        <input
-          type="text"
-          id="phone"
-          class="form-control"
-          v-model="user.phone"
-          placeholder="1234123"
-        />
-        <button type="button" class="btn btn-primary w-100">Registrarme</button>
-      </form>
+        <h1 class="title mt-3 text-primary">Tienda de Mascotas</h1>
+        <router-link to="/Home" class="btn btn-outline-primary w-50 mt-2">
+          Volver al Home
+        </router-link>
+      </div>
+  
+      <!-- Formulario de registro -->
+      <div class="registro-box p-4 shadow-lg animate-slide-up">
+        <h2 class="text-center text-secondary">Registro Proveedor</h2>
+        <form action="#" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre Proveedor:</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              v-model="user.name"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contact-name" class="form-label">Nombre Persona Contacto:</label>
+            <input
+              type="text"
+              id="contact-name"
+              class="form-control"
+              v-model="user.namecontacto"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              v-model="user.email"
+              placeholder="email@email.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Teléfono:</label>
+            <input
+              type="text"
+              id="phone"
+              class="form-control"
+              v-model="user.phone"
+              placeholder="1234123"
+            />
+          </div>
+          <button type="button" class="btn btn-primary w-100" @click="registroProveedor">
+            Registrarme
+          </button>
+        </form>
+      </div>
     </div>
   </template>
+  
    
   <script>
   export default {
@@ -75,58 +89,90 @@
   </script>
    
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
+  /* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .registro-box {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  to {
+    opacity: 1;
   }
-  .registro-box h2 {
-    margin: 0 0 20px;
-    font-size: 18px;
-    text-align: center;
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  .registro-box label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-    display: block;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  .registro-box input[type="text"],
-  .registro-box input[type="email"],
-  .registro-box input[type="tel"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  .registro-box button {
-    width: 100%;
-    padding: 10px;
-    background-color: #6cc0f7;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .registro-box button:hover {
-    background-color: #58a6db;
-  }
+}
+
+/* Clases de animación */
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5fafd, #dfeeff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen img {
+  max-width: 150px;
+  height: auto;
+  border: 3px solid #6cc0f7;
+}
+
+.title {
+  font-size: 24px;
+  color: #4a90e2;
+}
+
+.registro-box {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.registro-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.registro-box input {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.registro-box input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.registro-box button {
+  background: #4a90e2;
+  border: none;
+  transition: background 0.3s;
+}
+
+.registro-box button:hover {
+  background: #357ab8;
+}
+
   </style>
